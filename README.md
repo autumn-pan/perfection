@@ -8,3 +8,4 @@ C to attack
 E to skip/unstuck
 
 Recommended: Load this project into unity and play inside of the engine. The x86 build is subject to crashes and is unable to support two of the levels.
+Enter in Assets/Tutorial.unity
