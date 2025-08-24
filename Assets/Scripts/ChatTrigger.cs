@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ChatTrigger : MonoBehaviour
 {
+    public bool triggered = false;
     public ConversationHandler handler;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,6 +17,10 @@ public class ChatTrigger : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        StartCoroutine(handler.Play());
+        if(!triggered)
+        {
+            StartCoroutine(handler.Play());
+            triggered = true;
+        }
     }
 }
