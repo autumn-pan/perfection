@@ -17,7 +17,10 @@ public class ChatTrigger : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!triggered)
+        if (Time.timeSinceLevelLoad < 0.1f)
+            return;
+            
+        if (!triggered)
         {
             StartCoroutine(handler.Play());
             triggered = true;
